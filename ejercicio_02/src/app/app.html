@@ -1,0 +1,16 @@
+<h1>Ejercicio 02</h1>
+<span>
+  Crea una lista desplegable (select) con varias opciones de
+colores. Usa una directiva estructural para mostrar un
+mensaje específico dependiendo del color seleccionado,
+como "Has seleccionado rojo", "Has seleccionado azul",
+etc.
+</span><hr>
+
+  <select [(ngModel)]="color">
+    <option value="rojo">Rojo</option>
+    <option value="azul">Azul</option>
+    <option value="verde">Verde</option>
+  </select>
+  <h2 *ngIf="color">Has selecionado {{color}}</h2>
+

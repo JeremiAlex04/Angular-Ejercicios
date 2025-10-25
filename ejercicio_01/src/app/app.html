@@ -1,0 +1,27 @@
+<h1>Ejrcicio 01</h1>
+<span>
+  Crea una aplicación web simple que contenga cuatro botones interactivos. Utiliza
+directivas de atributo para que cada botón ejecute las siguientes acciones al hacer
+clic:
+• El primer botón debe cambiar el color del texto a rojo.
+• El segundo botón debe cambiar el color del texto a azul.
+• El tercer botón debe cambiar el color del texto a verde.
+• El cuarto botón debe cambiar el tamaño del texto.
+Los cambios deben ser dinámicos y visibles en tiempo real al interactuar con los
+botones. Utiliza la directiva click para vincular los eventos de los botones con las
+respectivas acciones.
+</span><hr>
+
+
+<div [ngClass]="activeClass" [ngStyle]="{'font-size.px':fontSize}">
+  Cambiar el color de fondo de la letra y tamaño
+</div>
+
+<button (click)="setActiveClass('Primario')">Color Primario</button>
+<button (click)="setActiveClass('Secundario')">Color Secundaria</button>
+<button (click)="setActiveClass('Terciario')">Color Terciario</button>
+<button (click)="increaseFontSize()">Aumentar Tamaño de letra</button>
+
+
+
+

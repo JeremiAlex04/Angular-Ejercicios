@@ -1,0 +1,34 @@
+<h2 class="bg-dark text-white text-center">Lista de empleados</h2>
+
+<div class="bg-info p-4 text-white w-50 mx-auto m-5 rounded">
+
+  <p>Nombre:
+    <input [(ngModel)]="nombre" placeholder="Escribe tu nombre"><br><br>
+  </p>
+  <p>Edad:
+    <input [(ngModel)]="edad" placeholder="Escribe tu edad"><br><br>
+  </p>
+  <button class="d-flex rounded" (click)="agregar()">Agregar</button>
+
+</div>
+<p class="rounded w-50 mx-auto text-danger fs-3" *ngIf="error">Estado: {{error}}</p>
+
+<div class="table-responsive w-50 mx-auto ">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let emp of empleados">
+        <td scope="row" >{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.edad}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

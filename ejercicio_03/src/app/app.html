@@ -1,0 +1,13 @@
+<h1>Ejercicio 03</h1>
+<span>
+Crea un input de texto y un botón que, al hacer clic,
+verifique cuántos caracteres tiene el texto ingresado.
+Usa una directiva estructural para mostrar un mensaje
+diferente dependiendo de si el texto tiene más de 10
+caracteres o no.
+</span><hr>
+<label class="texto-resust">Escribe una frase: </label>
+<input [(ngModel)]="text"><br><button (click)="limpiar()" >Limpiar</button>
+<p class="texto-resust" *ngIf="text.length > 10">Texto largo</p>
+<p class="texto-resust" *ngIf="text.length <= 10">Texto corto</p>
+

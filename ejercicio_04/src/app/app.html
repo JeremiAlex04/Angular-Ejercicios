@@ -1,0 +1,25 @@
+<h1>Ejercicios 04</h1>
+<p>
+  Crea una lista de productos y un campo de búsqueda. Usa
+  una directiva estructural para mostrar solo los productos
+  que coincidan con el texto ingresado en el campo de
+  búsqueda, actualizando la lista en tiempo real.
+</p>
+<hr>
+
+<label>Buscar Productos: </label>
+<input [(ngModel)]="busqueda" placeholder="Escribe el nombre del producto">
+
+<ul>
+  <li *ngFor="let producto of productosFiltrados">
+    {{producto}}
+  </li>
+</ul>
+
+<p *ngIf="productosFiltrados.length === 0 && busqueda">
+  No se encontraron productos para "{{busqueda}}"
+</p>
+
+<p *ngIf="busqueda">
+  Mostrando {{productosFiltrados.length}} de {{productos.length}} productos
+</p>
